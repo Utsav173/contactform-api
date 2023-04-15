@@ -148,9 +148,11 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cors: {
-      // allowOrigins: [
-      //   'https://example.com',
-      // ]
+      allowOrigins: [
+        'http://localhost:3000',
+        'http://localhost:3001',
+        'https://contact-form-api-ebej.onrender.com',
+      ]
     },
 
   },
@@ -265,10 +267,11 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://example.com',
-    //   'https://staging.example.com',
-    // ],
+    onlyAllowOrigins: [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'https://contact-form-api-ebej.onrender.com',
+    ],
 
 
     /***************************************************************************
@@ -355,8 +358,7 @@ module.exports = {
   * this, just try deploying without setting it and see if it works.)       *
   *                                                                         *
   ***************************************************************************/
-  // port: 80,
-
+  port: process.env.PORT || 1337,
 
 
   /**************************************************************************
