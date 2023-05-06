@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "dbfa8c56-c8b3-469f-9e3a-2357e3799bf0",
+		"name": "harsh api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23794641"
+	},
+	"item": [
+		{
+			"name": "contact-form",
+			"item": [
+				{
+					"name": "create data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "harsh panchal",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "harsh07@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "this message are done by utsav khatri",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Site_url}}/api/contactform",
+							"host": [
+								"{{Site_url}}"
+							],
+							"path": [
+								"api",
+								"contactform"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "updated this is test message of rockybhai",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "read",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1337/api/contactform/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"contactform",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "643a95ffde06a64fd0f5e6d9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/contactform/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"contactform",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list all data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/contactform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"contactform"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list single data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/api/contactform/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"contactform",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "643a95ffde06a64fd0f5e6d9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "table-booking",
+			"item": [
+				{
+					"name": "create table book and send email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "clientName",
+									"value": "harsh panchal",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "khatriutsav63@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "table booked by me",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "84567125",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Site_url}}/api/tablebookings",
+							"host": [
+								"{{Site_url}}"
+							],
+							"path": [
+								"api",
+								"tablebookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "updated this is test message of rockybhai",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "read",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Site_url}}/api/tablebookings/:id",
+							"host": [
+								"{{Site_url}}"
+							],
+							"path": [
+								"api",
+								"tablebookings",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Site_url}}/api/tablebookings/:id",
+							"host": [
+								"{{Site_url}}"
+							],
+							"path": [
+								"api",
+								"tablebookings",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list all data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site_url}}/api/tablebookings",
+							"host": [
+								"{{Site_url}}"
+							],
+							"path": [
+								"api",
+								"tablebookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list single data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Site_url}}/api/tablebookings/:id",
+							"host": [
+								"{{Site_url}}"
+							],
+							"path": [
+								"api",
+								"tablebookings",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Site_url",
+			"value": "http://localhost:1337",
+			"type": "string"
+		}
+	]
+}

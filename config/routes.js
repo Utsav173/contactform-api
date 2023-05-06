@@ -14,4 +14,10 @@ module.exports.routes = {
   'GET /api/contactform/:id': 'ContactformController.read',
   'PUT /api/contactform/:id': 'ContactformController.update',
   'DELETE /api/contactform/:id': 'ContactformController.delete',
+
+  'GET /api/tablebookings': 'TableBookingController.find',
+  'POST /api/tablebookings': 'TableBookingController.create',
+  'GET /api/tablebookings/:id': 'TableBookingController.findOne',
+  'PUT /api/tablebookings/:id': 'TableBookingController.update',
+  'DELETE /api/tablebookings/:id': 'TableBookingController.destroy',
 };

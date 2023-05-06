@@ -28,37 +28,35 @@ module.exports = {
 
       // if you want to add this email feauture, uncomment the below
 
-      //       const transporter = nodemailer.createTransport({
-      //         service: 'gmail',
-      //         auth: {
-      //           user: process.env.GMAIL_USERNAME,
-      //           pass: process.env.GMAIL_PASS,
-      //         },
-      //       });
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.GMAIL_USERNAME,
+          pass: process.env.GMAIL_PASS,
+        },
+      });
 
-      //       const mailOptions = {
-      //         from: contactForm.email,
-      //         to: 'junjunwala69@gmail.com',
-      //         subject: 'New contact created',
-      //         html: `
-      //     <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f7f7f7; border-radius: 10px;">
-      //       <h2 style="font-size: 24px; color: #333; margin-bottom: 20px;">New Contact Created</h2>
-      //       <div style="background-color: #fff; padding: 20px; border-radius: 10px;">
-      //         <p style="font-size: 18px; color: #333; margin-bottom: 10px;"><strong>Name:</strong> ${contactForm.name}</p>
-      //         <p style="font-size: 18px; color: #333; margin-bottom: 10px;"><strong>Email:</strong> ${contactForm.email}</p>
-      //         <p style="font-size: 18px; color: #333;"><strong>Message:</strong> ${contactForm.message}</p>
-      //       </div>
-      //     </div>
-      //   `,
-      //       };
+      const mailOptions = {
+        from: contactForm.email,
+        to: 'noreplay@gmail.com',
+        subject: 'New contact created',
+        html: `
+          <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f7f7f7; border-radius: 10px;">
+            <h2 style="font-size: 24px; color: #333; margin-bottom: 20px;">New Contact Created</h2>
+            <div style="background-color: #fff; padding: 20px; border-radius: 10px;">
+              <p style="font-size: 18px; color: #333; margin-bottom: 10px;"><strong>Name:</strong> ${contactForm.name}</p>
+              <p style="font-size: 18px; color: #333; margin-bottom: 10px;"><strong>Email:</strong> ${contactForm.email}</p>
+              <p style="font-size: 18px; color: #333;"><strong>Message:</strong> ${contactForm.message}</p>
+            </div>
+          </div>
+        `,
+      };
 
-      //       transporter.sendMail(mailOptions, (err, info) => {
-      //         if (err) {
-      //           console.log(err);
-      //         } else {
-      //           console.log(info);
-      //         }
-      //       });
+      transporter.sendMail(mailOptions, (err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
 
       return res.ok(contactForm);
     } catch (error) {
