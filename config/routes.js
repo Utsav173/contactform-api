@@ -20,4 +20,10 @@ module.exports.routes = {
   'GET /api/tablebookings/:id': 'TableBookingController.findOne',
   'PUT /api/tablebookings/:id': 'TableBookingController.update',
   'DELETE /api/tablebookings/:id': 'TableBookingController.destroy',
+
+  'GET /api/eventbooking': 'EventBookingController.find',
+  'POST /api/eventbooking': 'EventBookingController.create',
+  'GET /api/eventbooking/:id': 'EventBookingController.findOne',
+  'PUT /api/eventbooking/:id': 'EventBookingController.update',
+  'DELETE /api/eventbooking/:id': 'EventBookingController.destroy',
 };
